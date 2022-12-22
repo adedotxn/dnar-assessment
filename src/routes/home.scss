@@ -4,42 +4,6 @@
   display: grid;
 }
 
-.sidebar {
-  display: none;
-  align-items: center;
-
-  > div {
-    .hamburger,
-    .options div {
-      background-color: var(--bg-accent);
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      border-radius: 0.5rem;
-      height: -webkit-fit-content;
-      height: -moz-fit-content;
-      height: fit-content;
-      padding: 0.5rem;
-    }
-
-    .options {
-      margin-top: 1rem;
-      background-color: var(--bg-accent);
-      height: 80vh;
-      padding: 0.5rem;
-      border-radius: 0.5rem;
-
-      > div:nth-child(2) {
-        margin-top: 0.5rem;
-      }
-
-      .active {
-        background-color: var(--active-blue);
-      }
-    }
-  }
-}
-
 .content {
   .container {
     .top_level {
@@ -78,117 +42,6 @@
           border-radius: 0.5rem;
           // width: 55vw;
         }
-
-        .market_leaders {
-          margin-top: 1rem;
-          padding: 0.2rem 1.2rem 1rem 1.2rem;
-
-          h1 {
-            font-size: 1.5rem;
-          }
-
-          .leaderboard {
-            margin-top: 1rem;
-            overflow-x: hidden;
-            height: 10rem;
-            scroll-behavior: smooth;
-            scroll-snap-align: center;
-            scrollbar-width: thin;
-
-            &::-webkit-scrollbar {
-              width: 3px;
-            }
-          }
-
-          .leaderboard__card {
-            background-color: var(--purple);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1rem;
-            padding: 0rem 1rem;
-            border-radius: 0.5rem;
-
-            h2 {
-              font-size: 1.1rem;
-            }
-          }
-        }
-      }
-    }
-
-    .all_coins {
-      margin-top: 1rem;
-      padding: 0.2rem 1.2rem 1rem 1.2rem;
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .coins_list {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-        overflow-x: hidden;
-        height: 10rem;
-      }
-
-      .coin {
-        background-color: var(--purple);
-        width: -webkit-fit-content;
-        padding: 0.2rem 0.3rem;
-        width: -moz-fit-content;
-        width: fit-content;
-        border-radius: 0.4rem;
-        text-align: center;
-      }
-    }
-
-    .all_events {
-      h1 {
-        padding: 0rem 0.8rem;
-      }
-
-      .events__list {
-        height: 45vh;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
-        scroll-snap-align: center;
-        scrollbar-width: thin;
-
-        &::-webkit-scrollbar {
-          width: 50px;
-        }
-      }
-
-      .event__card {
-        background-color: var(--purple);
-        padding: 0.2rem 0.5rem;
-        margin-top: 0.5rem;
-        border-radius: 0.5rem;
-
-        h2 {
-          font-size: 1rem;
-          padding: 0;
-        }
-
-        p {
-          padding: 0;
-          font-size: 0.85rem;
-          line-height: 1.1rem;
-        }
-
-        .event__link {
-          display: flex;
-          align-items: center;
-          justify-content: flex-end;
-
-          a {
-            background-color: black;
-            padding: 0.2rem;
-            border-radius: 0.3rem;
-          }
-        }
       }
     }
   }
@@ -223,12 +76,6 @@
         .leaders-and-coins {
           section {
             width: 55vw;
-          }
-        }
-
-        .all_events {
-          .events__list {
-            height: 75vh;
           }
         }
       }

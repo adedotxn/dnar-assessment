@@ -1,0 +1,55 @@
+.all_events {
+  h1 {
+    padding: 0rem 0.8rem;
+  }
+
+  .events__list {
+    height: 45vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-align: center;
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 50px;
+    }
+  }
+
+  .event__card {
+    background-color: var(--purple);
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+
+    h2 {
+      font-size: 1rem;
+      padding: 0;
+    }
+
+    p {
+      padding: 0;
+      font-size: 0.85rem;
+      line-height: 1.1rem;
+    }
+
+    .event__link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      a {
+        background-color: black;
+        padding: 0.2rem;
+        border-radius: 0.3rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .all_events {
+    .events__list {
+      height: 75vh;
+    }
+  }
+}

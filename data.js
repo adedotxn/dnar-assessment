@@ -1,4 +1,4 @@
-export const ChartData = [
+export const MockChartData = [
     {
         "id": 1,
         "date": "Nov",

@@ -1,0 +1,46 @@
+.sidebar {
+  display: none;
+  align-items: center;
+
+  > div {
+    .hamburger,
+    .options div {
+      background-color: var(--bg-accent);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      border-radius: 0.5rem;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      padding: 0.5rem;
+    }
+
+    .options {
+      margin-top: 1rem;
+      background-color: var(--bg-accent);
+      height: 80vh;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+
+      > div:nth-child(2) {
+        margin-top: 0.5rem;
+      }
+
+      .active {
+        background-color: var(--active-blue);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sidebar {
+    display: grid;
+    place-items: center;
+
+    > div {
+      height: 100%;
+    }
+  }
+}

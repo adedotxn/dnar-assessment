@@ -17,9 +17,8 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
-    path: "/info",
+    path: "/info/:coinId",
     element: <Info />,
-    errorElement: <ErrorPage />,
   },
 ]);
 

@@ -1,0 +1,19 @@
+.chart {
+  margin-top: 1rem;
+  padding: 0.2rem 1.2rem 1rem 1.2rem;
+  background-color: var(--bg-accent);
+
+  .chart_stats {
+    display: flex;
+    align-items: center;
+
+    .price {
+      font-size: 1.5rem;
+    }
+
+    .percentage {
+      margin-left: 2rem;
+      color: var(--green);
+    }
+  }
+}

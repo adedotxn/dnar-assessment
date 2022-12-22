@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
-import { ChartData } from "../../data";
+import { MockChartData } from "../../../data";
 
-const MyCharts = () => {
+const LineChart = () => {
   const series = [
     //data on the y-axis
     {
       name: "Coin Graph",
-      data: ChartData.map((data) => data.average_temp),
+      data: MockChartData.map((data) => data.average_temp),
     },
   ];
   const options = {
     //data on the x-axis
     chart: { id: "bar-chart" },
     xaxis: {
-      categories: ChartData.map((data) => data.date),
+      categories: MockChartData.map((data) => data.date),
     },
     stroke: {
       width: 3,
@@ -24,9 +24,9 @@ const MyCharts = () => {
 
   return (
     <div>
-      <Chart options={options} series={series} type="line" width="300" />
+      <Chart options={options} series={series} type="line" width="290" />
     </div>
   );
 };
 
-export default MyCharts;
+export default LineChart;
