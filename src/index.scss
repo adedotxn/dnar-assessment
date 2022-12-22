@@ -1,0 +1,19 @@
+:root {
+  --purple: #7d30f5;
+  --bg: #17151d;
+  --bg-accent: #241f2a;
+  --text-color: #ffffff;
+  --active-blue: #3f6eff;
+  --graph-blue: #2c64bc;
+  --icons-blue: #3d6af6;
+
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  accent-color: var(--bg-accent);
+  background-color: var(--bg);
+}
