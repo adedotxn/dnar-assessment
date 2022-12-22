@@ -7,7 +7,6 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchCoinsList } from "../../utils/api";
 import styles from "./info.module.scss";
 import { NavLink, useMatch } from "react-router-dom";
-import { ResponsiveLine } from "@nivo/line";
 import { ChartData } from "../../data";
 import MyCharts from "../components/chart";
 
