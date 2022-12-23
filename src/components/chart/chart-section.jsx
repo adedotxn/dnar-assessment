@@ -1,6 +1,7 @@
 import React from "react";
 import LineChart from "./chart";
 import styles from "./chart-section.module.scss";
+import PropTypes from "prop-types";
 
 const ChartSection = ({ coinDetails }) => {
   return (
@@ -19,6 +20,10 @@ const ChartSection = ({ coinDetails }) => {
       </div>
     </section>
   );
+};
+
+ChartSection.propTypes = {
+  coinDetails: PropTypes.object,
 };
 
 export default ChartSection;

@@ -1,6 +1,7 @@
 import styles from "./exchange-ranking.module.scss";
 import arrowRightSvg from "../../assets/arrow-right.svg";
 import arrowDownSvg from "../../assets/arrow-down.svg";
+import PropTypes from "prop-types";
 
 const ExchangeRankingCard = ({ coinDetails }) => {
   return (
@@ -43,6 +44,10 @@ const ExchangeRankingCard = ({ coinDetails }) => {
       </section>
     </div>
   );
+};
+
+ExchangeRankingCard.propTypes = {
+  coinDetails: PropTypes.object,
 };
 
 export default ExchangeRankingCard;

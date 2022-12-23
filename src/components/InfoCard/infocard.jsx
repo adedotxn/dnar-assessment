@@ -2,6 +2,7 @@ import styles from "./infocard.module.scss";
 import globeSvg from "../../assets/globe.svg";
 import redditSvg from "../../assets/reddit.svg";
 import githubSvg from "../../assets/github.svg";
+import PropTypes from "prop-types";
 
 const InfoCard = ({ coinDetails }) => {
   return (
@@ -101,6 +102,10 @@ const InfoCard = ({ coinDetails }) => {
       </div>
     </section>
   );
+};
+
+InfoCard.propTypes = {
+  coinDetails: PropTypes.object,
 };
 
 export default InfoCard;
