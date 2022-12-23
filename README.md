@@ -8,6 +8,8 @@
 - Apexcharts: For mock data visualisation.
 - SCSS.
 - React Router Dom : For client side navigation.
+- API - [CoinGecko API](https://www.coingecko.com/en/api/documentation#)
+
 
 
 
