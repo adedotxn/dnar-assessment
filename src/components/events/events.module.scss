@@ -4,11 +4,17 @@
   }
 
   .events__list {
-    height: 45vh;
-    overflow-x: hidden;
+    width: 100%;
     scroll-behavior: smooth;
     scroll-snap-align: center;
     scrollbar-width: thin;
+    // display: grid;
+    // place-items: center;
+
+    > div {
+      overflow-x: hidden;
+      height: 45vh;
+    }
 
     &::-webkit-scrollbar {
       width: 50px;
@@ -18,8 +24,8 @@
   .event__card {
     background-color: var(--purple);
     padding: 0.2rem 0.5rem;
-    margin-top: 0.5rem;
-    border-radius: 0.5rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
 
     h2 {
       font-size: 1rem;
@@ -49,7 +55,9 @@
 @media screen and (min-width: 1024px) {
   .all_events {
     .events__list {
-      height: 75vh;
+      > div {
+        height: 75vh;
+      }
     }
   }
 }

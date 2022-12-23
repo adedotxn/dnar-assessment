@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
 import { MockChartData } from "../../../data";
+import useMediaQuery from "../../../utils/hook";
 
 const LineChart = () => {
   const series = [
@@ -12,7 +13,7 @@ const LineChart = () => {
   ];
   const options = {
     //data on the x-axis
-    chart: { id: "bar-chart" },
+    chart: { id: "line-chart" },
     xaxis: {
       categories: MockChartData.map((data) => data.date),
     },
@@ -22,9 +23,12 @@ const LineChart = () => {
     },
   };
 
+  const isDesktop = useMediaQuery(`(min-width: 1024px)`);
+  const width = isDesktop ? "350" : "290";
+
   return (
     <div>
-      <Chart options={options} series={series} type="line" width="290" />
+      <Chart options={options} series={series} type="line" width={width} />
     </div>
   );
 };

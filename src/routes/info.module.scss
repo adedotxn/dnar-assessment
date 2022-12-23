@@ -24,6 +24,10 @@
           width: 40vw;
         }
       }
+
+      .calender {
+        display: none;
+      }
     }
 
     main {
@@ -49,7 +53,7 @@
 
 @media screen and (min-width: 1024px) {
   .App {
-    grid-template-columns: 7vw 70vw 20vw;
+    grid-template-columns: 7vw 65vw 25vw;
   }
 
   .sidebar {
@@ -74,8 +78,31 @@
     margin-left: 2rem;
     .container {
       .top_level {
+        justify-content: flex-start;
+
         .mobile {
           display: none;
+        }
+
+        .calender {
+          margin-left: 1rem;
+          display: flex;
+          align-items: center;
+          background-color: var(--bg-accent);
+          border-radius: 0.3rem;
+          padding: 0.5rem 0.5rem;
+          width: 15vw;
+          justify-content: space-between;
+
+          > div {
+            display: flex;
+            align-items: center;
+          }
+
+          p {
+            font-size: 0.8rem;
+            margin: 0;
+          }
         }
       }
 

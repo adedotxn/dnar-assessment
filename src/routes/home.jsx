@@ -1,30 +1,29 @@
 import { useEffect, useState } from "react";
-import "./home.scss";
-import hamburgerMenu from "../assets/menu.svg";
+import styles from "./home.module.scss";
 import AllCoins from "../components/allcoins/allcoins";
 import Leaderboard from "../components/leaderboard/leaderboard";
 import Events from "../components/events/events";
 import Sidebar from "../components/sidebar/sidebar";
+import Search from "../components/search";
+import HamburgerComponent from "../components/sidebar/hamburger";
 
 function Home() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Sidebar />
 
-      <div className="content">
-        <div className="container">
-          <div className="top_level">
-            <div className="hamburger mobile">
-              <img src={hamburgerMenu} alt="Hamburger Menu" />
-            </div>
+      <div className={styles.content}>
+        <div className={styles.container}>
+          <div className={styles.top_level}>
+            <HamburgerComponent styles={styles} />
 
-            <div className="search">
-              <input type="text" name="Search bar" placeholder="Search" />
+            <div className={styles.search}>
+              <Search />
             </div>
           </div>
 
           <main>
-            <div className="leaders-and-coins">
+            <div className={styles.leaders_and_coins}>
               <Leaderboard />
               <AllCoins />
             </div>

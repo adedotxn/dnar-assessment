@@ -1,30 +1,24 @@
 import hamburgerMenu from "../../assets/menu.svg";
 import barSvg from "../../assets/bar.svg";
 import stackSvg from "../../assets/stack.svg";
-import { NavLink, useMatch } from "react-router-dom";
+import { NavLink, useMatch, useParams } from "react-router-dom";
 import styles from "./sidebar.module.scss";
-import { useState } from "react";
-import useMediaQuery from "../../../utils/hook";
+import { useSelector } from "react-redux";
+import HamburgerComponent from "./hamburger";
 
 const Sidebar = () => {
-  const [openMobileSidebar, setMobileSidebar] = useState(false);
-  const matchHome = useMatch("/");
-  const matchInfo = useMatch("/info");
-  const isDesktop = useMediaQuery(`(min-width: 1024px)`);
+  const { coinId } = useParams();
 
-  const handleSidebar = () => {
-    if (!isDesktop) {
-      console.log("Mobile");
-      setMobileSidebar(true);
-    }
-  };
+  //checking url params to be able to indicate page user is on
+  const matchHome = useMatch("/");
+  const matchInfo = useMatch(`/info/${coinId}`);
+
+  const sidebarState = useSelector((state) => state.sidebar.value);
 
   return (
-    <div className={styles.sidebar}>
+    <div className={sidebarState ? styles.mobile_sidebar : styles.sidebar}>
       <div>
-        <div className={styles.hamburger}>
-          <img src={hamburgerMenu} alt="Hamburger Menu" />
-        </div>
+        <HamburgerComponent styles={styles} />
 
         <div className={styles.options__container}>
           <div className={styles.options}>
@@ -35,13 +29,15 @@ const Sidebar = () => {
             </div>
 
             <div className={Boolean(matchInfo) ? styles.active : ""}>
-              <NavLink to="/info">
+              <NavLink to="/info/ethereum">
                 <img src={barSvg} alt="" />
               </NavLink>
             </div>
           </div>
         </div>
       </div>
+
+      {sidebarState && <div className={styles.empty}></div>}
     </div>
   );
 };

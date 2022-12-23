@@ -1,5 +1,9 @@
 .sidebar {
   display: none;
+}
+
+.sidebar,
+.mobile_sidebar {
   align-items: center;
 
   > div {
@@ -27,11 +31,38 @@
         margin-top: 0.5rem;
       }
 
+      > div {
+        transition: padding 300ms;
+        transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+        &:hover {
+          padding: 0.5rem 1rem;
+          background-color: var(--active-blue-darker);
+        }
+      }
+
       .active {
         background-color: var(--active-blue);
       }
     }
   }
+}
+
+.mobile_sidebar {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  -webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
+  width: 20vw;
+  left: 0;
+
+  // .empty {
+  //   background-color: white;
+  //   width: 80vw;
+  //   height: 100vh;
+  // }
 }
 
 @media screen and (min-width: 1024px) {

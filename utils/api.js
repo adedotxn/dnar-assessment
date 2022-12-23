@@ -14,6 +14,5 @@ export const getSpecificCoinDetails  = async (coinId) => {
 
 export const fetchMarketLeaders = async() => {
     const fetch = await apiClient.get(`/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`)
-    console.log("got", fetch.data)
     return fetch.data
 }

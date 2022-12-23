@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
 import { fetchMarketLeaders } from "../../../utils/api";
 import styles from "./leaderboard.module.scss";
 
@@ -8,6 +9,7 @@ const Leaderboard = () => {
     queryKey: ["marketLeaders"],
     queryFn: fetchMarketLeaders,
   });
+  const navigate = useNavigate();
 
   return (
     <section className={styles.market_leaders}>
@@ -20,7 +22,11 @@ const Leaderboard = () => {
           <h1>Market leaders</h1>
           <div className={styles.leaderboard}>
             {data.map((coin) => (
-              <div key={coin.id} className={styles.leaderboard__card}>
+              <div
+                key={coin.id}
+                onClick={() => navigate(`/info/${coin.id}`)}
+                className={styles.leaderboard__card}
+              >
                 <h2>
                   {coin.name}({coin.symbol})
                 </h2>

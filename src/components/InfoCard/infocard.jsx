@@ -12,7 +12,12 @@ const InfoCard = ({ coinDetails }) => {
         <img src={coinDetails.image.small} alt="" />
       </div>
 
-      <div className={styles.description}>{coinDetails.description.en}</div>
+      <div className={styles.description}>
+        <p>
+          {coinDetails.name}({coinDetails.symbol})
+        </p>
+        <p>{coinDetails.description.en}</p>
+      </div>
 
       <div className={styles.links}>
         <div>
@@ -40,12 +45,16 @@ const InfoCard = ({ coinDetails }) => {
 
         <div className={styles.facts_1}>
           <div>
-            <p>Hashing Algorithm</p>
-            <p>{coinDetails.hashing_algorithm}</p>
+            <p>Hashing Algorithm: </p>
+            <p>
+              {coinDetails.hashing_algorithm === null
+                ? "Unknown"
+                : coinDetails.hashing_algorithm}
+            </p>
           </div>
 
           <div>
-            <p>Country Origin</p>
+            <p>Country Origin: </p>
             <p>
               {coinDetails.country_origin === "" || null
                 ? "Unknown"
@@ -54,7 +63,7 @@ const InfoCard = ({ coinDetails }) => {
           </div>
 
           <div>
-            <p>Category</p>
+            <p>Category: </p>
             <p>{coinDetails.categories[0]}</p>
           </div>
         </div>
@@ -62,22 +71,30 @@ const InfoCard = ({ coinDetails }) => {
         <div className={styles.facts_2}>
           <div>
             <div>
-              <p>Total Supply</p>
+              <p>Total Supply:</p>
               <p>
                 {coinDetails.market_data.total_supply === null || ""
-                  ? "null"
+                  ? "Unknown"
                   : coinDetails.market_data.total_supply}
               </p>
             </div>
 
             <div>
-              <p>Max Supply</p>
-              <p>0932490.00</p>
+              <p>Max Supply:</p>
+              <p>
+                {coinDetails.market_data.max_supply === null || ""
+                  ? "Unknown"
+                  : coinDetails.market_data.max_supply}
+              </p>
             </div>
 
             <div>
-              <p>Circulating</p>
-              <p>1022038.33</p>
+              <p>Circulating:</p>
+              <p>
+                {coinDetails.market_data.circulating_supply === null || ""
+                  ? "Unknown"
+                  : coinDetails.market_data.circulating_supply.toFixed(2)}
+              </p>
             </div>
           </div>
         </div>

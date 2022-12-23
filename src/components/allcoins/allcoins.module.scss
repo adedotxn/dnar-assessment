@@ -21,6 +21,19 @@
     width: 6rem;
     border-radius: 0.4rem;
     text-align: center;
+    transition: -webkit-transform 350ms;
+    transition: border-radius 350ms, -webkit-transform 350ms;
+    transition: border-radius 350ms, transform 350ms;
+    transition: border-radius 350ms, transform 350ms, -webkit-transform 350ms;
+    transition: transform 350ms, -webkit-transform 350ms;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
+    &:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      background-color: var(--purple-darker);
+      border-radius: 0rem;
+    }
 
     a {
       color: white;

@@ -39,7 +39,7 @@ const ExchangeRankingCard = ({ coinDetails }) => {
 
       <section className={styles.rank_card}>
         <h2>Alexa Rank</h2>
-        <p>{coinDetails.coingecko_rank}</p>
+        <p>{coinDetails.public_interest_stats.alexa_rank}</p>
       </section>
     </div>
   );
