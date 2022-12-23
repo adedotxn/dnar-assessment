@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import hamburgerMenu from "../assets/menu.svg";
 import calenderSvg from "../assets/calender.svg";
 import arrowDownSvg from "../assets/arrow-down.svg";
 import { useQuery } from "@tanstack/react-query";
@@ -15,13 +14,18 @@ import Search from "../components/search";
 import HamburgerComponent from "../components/sidebar/hamburger";
 
 function Info() {
+  const [query, setQuery] = useState("");
   const { coinId } = useParams();
+
+  useEffect(() => {
+    setQuery(coinId);
+  }, [coinId]);
 
   const [coinDetails, setCoinDetails] = useState();
   const { isLoading, isError, data, error } = useQuery({
-    queryKey: ["coinDetails"],
-    queryFn: () => getSpecificCoinDetails(coinId),
-    enabled: coinId !== "",
+    queryKey: ["coinDeets"],
+    queryFn: () => getSpecificCoinDetails(query),
+    enabled: query === coinId,
   });
 
   useEffect(() => {

@@ -8,7 +8,7 @@ const LineChart = () => {
     //data on the y-axis
     {
       name: "Coin Graph",
-      data: MockChartData.map((data) => data.average_temp),
+      data: MockChartData.map((data) => data.average),
     },
   ];
   const options = {

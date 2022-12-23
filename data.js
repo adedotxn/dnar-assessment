@@ -2,45 +2,45 @@ export const MockChartData = [
     {
         "id": 1,
         "date": "Nov",
-        "average_temp": 25
+        "average": 25
     },
     {
         "id": 2,
         "date": "Dec",
-        "average_temp": 20
+        "average": 20
     },
     {
         "id": 3,
         "date": "Jan",
-        "average_temp": 21
+        "average": 21
     },
     {
         "id": 4,
         "date": "Feb",
-        "average_temp": 30
+        "average": 30
     },
     {
         "id": 5,
         "date": "Mar",
-        "average_temp": 42
+        "average": 42
     },
     {
         "id": 6,
         "date": "Apr",
-        "average_temp": 18
+        "average": 18
     },
     {
         "id": 7,
         "date": "May",
-        "average_temp": 33
+        "average": 33
     },
     {
         "id": 8,
         "date": "Jun",
-        "average_temp": 27
+        "average": 27
     },{
         "id": 9,
         "date": "Jul",
-        "average_temp": 25
+        "average": 25
     }
 ]
